@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; 
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GeoLocationComponent } from './components/geo-location/geo-location/geo-location.component';
+import { CinemasNearbyComponent } from './components/cinemas-nearby/cinemas-nearby/cinemas-nearby.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GeoLocationComponent,
+    CinemasNearbyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
