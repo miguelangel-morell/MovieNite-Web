@@ -1,4 +1,4 @@
-h3, ul {
+h4, ul {
     color: white;
 }
 
@@ -16,7 +16,6 @@ li{
 }
 
 .container {
-    display: grid;
     grid-template-columns: 100px 100px 100px;
 }
 
@@ -29,4 +28,8 @@ li{
     border-color: lightseagreen;
     background-color: lightseagreen;
     margin-bottom: 5px;
+}
+
+#badgeContainer{
+    padding-left: 0px;
 }

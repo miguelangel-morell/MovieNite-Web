@@ -1,11 +1,11 @@
-<div style="padding-top: 10px;" class="container" *ngIf="filmsComingSoon">
+<div id="filmContainer" class="container" *ngIf="filmsComingSoon">
     <div class="d-flex justify-content-center">
         <ul class="no-bullets row" *ngFor="let film of filmsComingSoon.films">
             <li>
                 <div>
-                    <div style="text-align: center; overflow: hidden; white-space: nowrap;"><strong>{{ film.film_name }}</strong></div> 
+                    <div id="formatText"><strong>{{ film.film_name }}</strong></div> 
                     <div><img src={{film.images.poster[1].medium.film_image}} alt=""></div>
-                    <div style="text-align: center; overflow: hidden; white-space: nowrap;"> <strong>{{ film.release_dates[0].release_date | date:'MMMM y' }}</strong></div>  
+                    <div id="formatText"> <strong>{{ film.release_dates[0].release_date | date:'MMMM y' }}</strong></div>  
                 </div>
             </li>
         </ul>
