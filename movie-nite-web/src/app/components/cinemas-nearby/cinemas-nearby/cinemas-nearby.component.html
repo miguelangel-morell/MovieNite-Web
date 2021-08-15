@@ -1,9 +1,9 @@
 <div class="container">
-    <div style="padding-left: 3%;" class="d-flex grid row" *ngIf="cinemasNearby && !filmsShowing">
-        <ul style="width: 350px; margin: 1.5% 2.5%;" class="no-bullets justify-content-center" *ngFor="let cinema of cinemasNearby.cinemas">
+    <div id="cinemaContainer" class="d-flex grid row" *ngIf="cinemasNearby && !filmsShowing">
+        <ul id="cinemaList" class="no-bullets justify-content-center" *ngFor="let cinema of cinemasNearby.cinemas">
             <li class="">
                 <div>
-                    <div style="white-space: normal;"><strong>{{ cinema.cinema_name }}</strong> </div>
+                    <div id="cinemaName"><strong>{{ cinema.cinema_name }}</strong> </div>
                     <div>{{ cinema.address }}</div>
                     <div>{{ cinema.city}}, {{ cinema.state}}</div>
                     <div>{{ cinema.distance | number: '0.0-2' }} miles away</div>

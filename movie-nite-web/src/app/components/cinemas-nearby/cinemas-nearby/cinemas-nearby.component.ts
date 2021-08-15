@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { CinemasNearby } from 'src/app/models/cinemas/cinemas-nearby';
 import { Data } from 'src/app/models/geolocation/data';
 import { CinemasNearbyService } from 'src/app/services/cinemas-nearby-service/cinemas-nearby.service';
@@ -18,14 +19,16 @@ export class CinemasNearbyComponent implements OnInit {
   selectedCinemaId: number;
   selectedCinemaLat: string;
   selectedCinemaLng: string;
+
+  subs : Subscription = new Subscription();
   
   constructor(public cinemasService: CinemasNearbyService) { }
 
   ngOnInit(): void {
     console.log(this.geoLocationData.latitude + ";" + this.geoLocationData.longitude);
 
-    this.cinemasService.getCinemasNearby(this.geoLocationData.latitude.toString(),this.geoLocationData.longitude.toString())
-    .subscribe(data => this.cinemasNearby = data);
+    this.subs.add(this.cinemasService.getCinemasNearby(this.geoLocationData.latitude.toString(),this.geoLocationData.longitude.toString())
+    .subscribe(data => this.cinemasNearby = data));
 
   }
 
@@ -36,6 +39,7 @@ export class CinemasNearbyComponent implements OnInit {
     console.log(item);
     console.log(this.selectedCinemaId);
     this.filmsShowing = true; 
+    this.subs.unsubscribe();
   }
 
 }
