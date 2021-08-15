@@ -1,0 +1,32 @@
+h3, ul {
+    color: white;
+}
+
+.no-bullets{
+    list-style-type: none;
+}
+
+.showtime-grid{
+    width: 350px;
+}
+
+li{
+    margin-right: 10px;
+    float: left;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+}
+
+.showtime-imax-grid{
+    display: grid;
+    grid-template-columns: 350px 350px;
+}
+
+#showtimeBadge{
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+    margin-bottom: 5px;
+}

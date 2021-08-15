@@ -1,15 +1,15 @@
 export interface Cinema 
 {
-    cinemaId    :number;
-    cinemaName  :string;
+    cinema_id   :number;
+    cinema_name :string;
     address     :string;
     address2    :string;
     city        :string;
     state       :string;
     county      :string;
     postcode    :string;
-    latitiude   :string;
-    longitude   :string;
+    lat         :string;
+    lng         :string;
     distance    :number;
-    logoUrl     :string;
+    logo_url    :string;
 }

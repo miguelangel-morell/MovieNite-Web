@@ -1,6 +1,6 @@
 export interface Medium 
 {
-    fimImage    :string;
+    film_image  :string;
     width       :number;
     height      :number;
 }

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+nav {
+    background-color: lightseagreen;
+}
+
+.navbar-brand{
+    color:white;
+}
+
+#citySearchButton{
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#citySearchButton:hover{
+    color: black;
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+}
+
+span{
+    font-family: 'Pacifico', cursive;
+}
+
+.movie-title{
+    font-family: 'Pacifico', cursive;
+}

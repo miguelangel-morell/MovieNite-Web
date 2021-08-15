@@ -2,7 +2,7 @@ import { Medium } from "./medium";
 
 export interface PosterObj 
 {
-    imageOrientation    :string;
+    image_orientation   :string;
     region              :string;
-    med                 :Medium;
+    medium              :Medium;
 }

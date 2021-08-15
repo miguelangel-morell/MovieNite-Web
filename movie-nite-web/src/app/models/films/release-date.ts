@@ -1,5 +1,5 @@
 export interface ReleaseDate 
 {
-    dateOfRelease   :Date;
+    release_date    :Date;
     notes           :string;
 }

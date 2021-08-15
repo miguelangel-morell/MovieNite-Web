@@ -3,6 +3,6 @@ import { FilmShowtimeDetail } from "./film-showtime-detail";
 
 export interface FilmShowtime 
 {
-    filmDetail  :FilmShowtimeDetail;
+    film       :FilmShowtimeDetail;
     cinemas     :CinemaShowtime[];
 }

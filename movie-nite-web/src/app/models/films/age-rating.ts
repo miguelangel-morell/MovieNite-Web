@@ -1,6 +1,6 @@
 export interface AgeRating 
 {
-    rating          :string;
-    ageRatingImage  :string;
-    ageAdvisory     :string;
+    rating              :string;
+    age_rating_image    :string;
+    age_advisory        :string;
 }

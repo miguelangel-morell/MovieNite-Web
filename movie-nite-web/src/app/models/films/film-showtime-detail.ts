@@ -3,11 +3,11 @@ import { Images } from "./images";
 
 export interface FilmShowtimeDetail 
 {
-    filmId      :number;
-    imbdId      :number;
-    imbdTitleId :string;
-    fileName    :string;
-    versionType :string;
-    ageRatings  :AgeRating[];
-    filmImages  :Images;
+    film_id         :number;
+    imbd_id         :number;
+    imbd_title_id   :string;
+    film_name       :string;
+    version_type    :string;
+    age_rating      :AgeRating[];
+    images          :Images;
 }

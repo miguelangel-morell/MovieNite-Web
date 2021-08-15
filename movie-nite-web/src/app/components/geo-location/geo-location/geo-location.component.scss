@@ -1,0 +1,31 @@
+// .form-select{
+//    // display: inline;
+// }
+
+#citySearchButton{
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+    width: auto;
+    margin-left: 10px;
+}
+
+#citySearchButton:hover{
+    color: black;
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+}
+
+#tryAgain{
+    color: lightseagreen;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+#tryAgain:hover{
+    color: rgba(32, 178, 171, 0.603);
+}
+
+#geo-location-label{
+    color: white;
+    text-align: center;
+}

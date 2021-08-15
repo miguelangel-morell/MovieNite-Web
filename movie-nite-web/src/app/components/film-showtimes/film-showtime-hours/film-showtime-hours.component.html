@@ -1,0 +1,20 @@
+ <div class="showtime-imax-grid">
+    
+       <div class="showtime-grid" *ngIf="standardTimes">
+            <h3>Standard Times:</h3>
+            <div>
+                <ul style="padding-left: 0px;" class="no-bullets container" *ngFor="let standard of standardTimes">
+                    <li><span id="showtimeBadge" class="badge">{{ standard.start_time }}</span></li>
+                </ul>                 
+            </div>
+       
+        </div>
+    
+        <div class="showtime-grid" *ngIf="imaxTimes">
+            <h3>IMAX Times:</h3>
+            <ul style="padding-left: 0px;" class="no-bullets container" *ngFor="let imax of imaxTimes">
+                <li><span id="showtimeBadge" class="badge">{{ imax.start_time }}</span></li>
+            </ul>        
+        </div>
+ 
+   </div>

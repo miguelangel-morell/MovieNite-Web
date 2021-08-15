@@ -2,7 +2,7 @@ import { TimeShowing } from "./time-showing";
 
 export interface RoomShowtimes 
 {
-    filmId      :number;
-    fileName    :string;
-    time        :TimeShowing[];
+    film_id      :number;
+    film_name    :string;
+    times        :TimeShowing[];
 }

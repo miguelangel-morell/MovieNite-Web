@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movie-nite-web';
+
+  begin: boolean = false;
+
+  beginSearch()
+  {
+    this.begin = true;
+  }
+
 }
+

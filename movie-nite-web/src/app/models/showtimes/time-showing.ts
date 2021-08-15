@@ -1,5 +1,5 @@
 export interface TimeShowing 
 {
-    startTime   :Date;
-    endTime     :Date;
+    start_time   :Date;
+    end_time     :Date;
 }

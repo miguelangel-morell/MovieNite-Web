@@ -1,0 +1,43 @@
+<div style="padding-left: 10%" class="container">
+    <div class="row" *ngIf="filmShowtimes">
+        <h1 style="color: white;"><strong>{{filmShowtimes.film_name}}</strong></h1>
+    </div>
+    
+    <div class="showing-grid row" *ngIf="filmShowtimes">
+        <div class="container">
+            <div class="d-flex">
+                <div>
+                    <img style="width: 250px; height: 350px;" src={{filmShowtimes.images.poster[1].medium.film_image}} alt="">
+                </div>
+                
+                <div style="margin-left: 30px;" *ngIf="cinemaShowtimes">
+                    <app-film-showtime-hours [cinemas]="cinemaShowtimes" [cinemaId]="cinemaId"></app-film-showtime-hours>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+
+
+
+    <!-- <div *ngIf="showCinemaShowings">
+        
+        <div *ngIf="standardTimes">
+            <h3>Standard Times:</h3>
+
+        </div>
+
+        <div *ngIf="imaxTimes">
+            <h3>IMAX Times:</h3>
+            <ul *ngFor="let imax of imaxTimes">
+                <li>{{ imax.start_time}} - {{ imax.end_time }}</li>
+            </ul>
+        </div>
+    </div> -->
+
+

@@ -1,0 +1,35 @@
+.no-bullets{
+    list-style-type: none;
+}
+
+.coming-soon-btn{
+    margin-top: 10px;
+}
+
+img{
+    margin-bottom: 10px;
+}
+
+.align-movie-btn{
+    padding-left: 15px;
+}
+
+#citySearchButton{
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+    width: auto;
+}
+
+#citySearchButton:hover{
+    color: black;
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+}
+
+li{
+    float: left;
+    width:  225px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: white;
+}

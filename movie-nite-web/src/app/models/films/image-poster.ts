@@ -2,5 +2,5 @@ import { PosterObj } from "./poster-obj";
 
 export interface ImagePoster 
 {
-    poster  :PosterObj;
+    1  :PosterObj;
 }

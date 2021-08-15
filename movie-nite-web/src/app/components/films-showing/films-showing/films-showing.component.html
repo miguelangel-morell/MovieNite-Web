@@ -1,0 +1,29 @@
+<div *ngIf="showComingSoon && !showShowtimes">
+    <app-films-coming-soon [lat]="cinemaLat" [long]="cinemaLng"></app-films-coming-soon>
+</div>
+
+<div class="container" *ngIf="!showComingSoon && filmsShowing && !showShowtimes">
+    <div class=" d-flex justify-content-center">
+        <div class="row">
+            <button id="citySearchButton" class="btn btn-danger btn-sm coming-soon-btn" (click)="viewComingSoon()">View Movies Coming Soon</button>
+        </div>
+    </div>
+    
+    <div style="padding-top: 5px;" class="d-flex justify-content-center">
+        <ul class="no-bullets row" *ngFor="let film of filmsShowing.films">
+            <li>
+                <div>
+                    <div style="text-align: center; overflow: hidden; white-space: nowrap;"><strong>{{ film.film_name }}</strong></div> 
+                    <div><img src={{film.images.poster[1].medium.film_image}} alt=""></div>
+                    <div class="align-movie-btn"><button id="citySearchButton" class="btn btn-danger btn-sm" (click)="viewShowtimes(film.film_id)">View Today's Showtimes</button></div>
+                </div>
+             </li>
+        </ul>
+    </div>
+</div>   
+ 
+<div *ngIf="showShowtimes">
+    <app-film-showtimes [filmId]="filmId" [lat]="cinemaLat" [long]="cinemaLng" [cinemaId]="cinemaId"></app-film-showtimes>
+</div>
+    
+

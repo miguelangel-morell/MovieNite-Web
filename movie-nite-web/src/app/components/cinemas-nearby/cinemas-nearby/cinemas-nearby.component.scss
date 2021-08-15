@@ -1,0 +1,22 @@
+.no-bullets{
+    list-style-type: none;
+}
+
+#citySearchButton{
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+    width: auto;
+}
+
+#citySearchButton:hover{
+    color: black;
+    border-color: lightseagreen;
+    background-color: lightseagreen;
+}
+
+li{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
