@@ -29,3 +29,35 @@
     color: white;
     text-align: center;
 }
+
+#formGroup{
+    padding-left: 10px;
+}
+
+#validationDiv{
+    padding-left: 0%;
+}
+
+#stateSelectValidation{
+    width: 225px; 
+    margin-top: 5px;
+    padding: 10px;
+}
+
+#citySearchValidation{
+    width: 377px; 
+    margin-top: 5px; 
+    padding: 10px
+}
+
+#noCitiesFound{
+    width: 320px; 
+    margin-top: 5px; 
+    padding: 10px;
+}
+
+#citySelectValidation{
+    width: 350px; 
+    margin-top: 5px; 
+    padding: 10px;
+}

@@ -151,6 +151,7 @@ export class GeoLocationComponent implements OnInit {
           this.geoData.longitude = city.longitude;
           this.showCinemasNearby = true;
           this.showCitySearch = false;
+          this.subs.unsubscribe();
           break;
         }
 
@@ -161,8 +162,7 @@ export class GeoLocationComponent implements OnInit {
       this.isValidCityState = false;
     }
     
-
-    console.log("City,State: " + this.geoData.name + "," + this.stateSelected + " (Lat: " + this.geoData.latitude + ", Long: " + this.geoData.longitude + ")");
+    //console.log("City,State: " + this.geoData.name + "," + this.stateSelected + " (Lat: " + this.geoData.latitude + ", Long: " + this.geoData.longitude + ")");
   }
 
   changeStateSelection(){

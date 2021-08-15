@@ -3,11 +3,11 @@
         <ul style="width: 350px; margin: 1.5% 2.5%;" class="no-bullets justify-content-center" *ngFor="let cinema of cinemasNearby.cinemas">
             <li class="">
                 <div>
-                        <div style="white-space: normal;"><strong>{{ cinema.cinema_name }} bjhgsjhsgkajhfgskfjhghbjhgkj hgkjhgkjhgkjhgkjhgkjgfaskj</strong> </div>
-                        <div>{{ cinema.address }}</div>
-                        <div>{{ cinema.city}}, {{ cinema.state}}</div>
-                        <div>{{ cinema.distance | number: '0.0-2' }} miles away</div>
-                        <div><button id="citySearchButton" (click)="selectCinema(cinema)" class="btn btn-danger btn-sm">View Movies</button></div>                    
+                    <div style="white-space: normal;"><strong>{{ cinema.cinema_name }}</strong> </div>
+                    <div>{{ cinema.address }}</div>
+                    <div>{{ cinema.city}}, {{ cinema.state}}</div>
+                    <div>{{ cinema.distance | number: '0.0-2' }} miles away</div>
+                    <div><button id="citySearchButton" (click)="selectCinema(cinema)" class="btn btn-danger btn-sm">View Movies</button></div>                    
                 </div>
 
             </li>
@@ -17,8 +17,8 @@
 
 <div *ngIf="filmsShowing">
     <app-films-showing 
-    [cinemaId]="selectedCinemaId" 
-    [cinemaLat]="selectedCinemaLat"
-    [cinemaLng]="selectedCinemaLng">
+        [cinemaId]="selectedCinemaId" 
+        [cinemaLat]="selectedCinemaLat"
+        [cinemaLng]="selectedCinemaLng">
     </app-films-showing>
 </div>

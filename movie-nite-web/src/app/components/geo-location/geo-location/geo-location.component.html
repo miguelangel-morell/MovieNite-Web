@@ -4,7 +4,7 @@
   <h3 id="geo-location-label">Select Your Locaction</h3>
  
  <div class="d-flex justify-content-center" *ngIf="searchState">
-    <form [formGroup]="geoLocationForm" style="padding-left: 10px;" 
+    <form [formGroup]="geoLocationForm" id="formGroup"
            (ngSubmit)="nextButton(geoLocationForm.value.selectState)" required>
       <div class="row">
         <select style="width: 150px;" class="form-select" formControlName="selectState" (change)="changeStateSelection()">
@@ -13,31 +13,32 @@
             {{stateCode.name}}
           </option>
         </select>
+       
         <button id="citySearchButton" type="submit" class="btn btn-danger">Next</button>
       </div>
 
-      <div style="padding-left: 0%;" class="row" *ngIf="!isValid" >
-        <div style="width: 225px; margin-top: 5px; padding: 10px" class="alert alert-danger">
+      <div id="validationDiv" class="row" *ngIf="!isValid" >
+        <div id="stateSelectValidation" class="alert alert-danger">
           <strong>State selection is required.</strong>
         </div>
       </div>
 
     </form>
   </div>
-  
-  
+    
   <div class="d-flex justify-content-center" *ngIf="searchCity">
-    <form [formGroup]="geoLocationForm" style="padding-left: 10px;"
+    <form [formGroup]="geoLocationForm" id="formGroup"
           (ngSubmit)="showCityState(geoLocationForm.value.inputCity)" required>
           <div class="row">
             <input  formControlName="inputCity" class="form-control" style="width: 250px;"
-            placeholder="Enter City Name" type="text" (keydown)="inputChanged()">
+                    placeholder="Enter City Name" type="text" (keydown)="inputChanged()">
+            
             <button id="citySearchButton" class="btn btn-danger" type="submit">Search Cities</button>
           </div>
 
-      <div class="row" style="padding-left: 0%;" *ngIf="!isValidInput" >
-        <div class="alert alert-danger" style="width: 377px; margin-top: 5px; padding: 10px" >
-          <strong>City input cannot be empty</strong>
+      <div id="validationDiv" class="row"  *ngIf="!isValidInput" >
+        <div id="citySearchValidation" class="alert alert-danger">
+          <strong>City input cannot be empty.</strong>
         </div>
       </div>
     </form>
@@ -45,10 +46,10 @@
 
   <div class="d-flex justify-content-center" *ngIf="geolocationObj">
     <div class="row" *ngIf="geolocationObj.data.length == 0">
-        <div style="width: 320px; margin-top: 5px; padding: 10px" class="alert alert-info">
+        <div id="noCitiesFound" class="alert alert-info">
           <strong>
             No cities found.
-            <button id="tryAgain" type="button" class="btn btn-link" (click)="searchAgain()">
+            <button id="tryAgain"  class="btn btn-link" type="button" (click)="searchAgain()">
               <strong>Try another search.</strong> 
             </button>
           </strong>
@@ -58,7 +59,7 @@
 
   <div class="d-flex justify-content-center" *ngIf="geolocationObj">
     <div *ngIf="geolocationObj.data.length != 0">
-      <form [formGroup]="geoLocationForm" style="padding-left: 10px;" (change)="changeCityStateSelection()"
+      <form [formGroup]="geoLocationForm" id="formGroup" (change)="changeCityStateSelection()"
              (ngSubmit)="assignLocationValues(geoLocationForm.value.selectCity)" required>
 
             <div class="row">
@@ -68,24 +69,20 @@
                   {{geolocation.name }}, {{stateSelected}}
                 </option>
               </select>
-                <button id="citySearchButton" class="btn btn-danger">Search Cinemas</button>
+                
+              <button id="citySearchButton" class="btn btn-danger">Search Cinemas</button>
             </div>
 
-
-            <div class="row" style="padding-left: 0%;" *ngIf="!isValidCityState" >
-              <div style="width: 350px; margin-top: 5px; padding: 10px" class="alert alert-danger">
+            <div id="validationDiv" class="row" *ngIf="!isValidCityState" >
+              <div id="citySelectValidation" class="alert alert-danger">
                 <strong>City selection is required.</strong>
               </div>
             </div>
-
+            
       </form>
     </div>
   </div>
-
-
 </div>
-
-
 
 <div *ngIf="showCinemasNearby">
     <app-cinemas-nearby [geoLocationData]="geoData"></app-cinemas-nearby>
